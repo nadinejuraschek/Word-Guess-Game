@@ -86,3 +86,13 @@ function chooseWord() {
     underscores = randomWord.length;
 }
 
+/****************************
+ GAME CODE
+ ****************************/
+
+// Player Enters Letters
+document.onkeyup = function (event) {
+    playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    correctLetter(playerGuess);
+    endGame();
+};
