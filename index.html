@@ -27,9 +27,77 @@
   </head>
   <body>
     <!-- HEADER -->
-    <!-- NAVIGATION -->
+    <div class="header">
+      <div class="jumbotron-fluid">
+        <h1 class="heading-primary">Word-Guess-Game</h1>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav class="navbar navbar-expand-sm">
+        <ul class="navbar-nav mt-2 mt-lg-0 mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link halloween" href="halloweenTheme.html"
+              >Halloween <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link christmas" href="christmasTheme.html"
+              >Christmas</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <!-- GAME CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card transparent card-guess-word">
+            <div class="card-body">
+              <h3 class="heading-secondary">Your Word Is:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <div class="card-guesses">
+            <div class="card-body">
+              <h5 class="heading-tertiary">Used Letters</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-4 text-center">
+          <div class="card-remaining">
+            <div class="card-body">
+              <h5 class="card-title heading-tertiary">Guesses Left</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-4">
+          <div class="card-wins">
+            <div class="card-body">
+              <h5 class="card-title heading-tertiary">Wins</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-4">
+          <div class="card-losses">
+            <div class="card-body">
+              <h5 class="card-title heading-tertiary">Losses</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- FOOTER -->
+    <nav class="navbar fixed-bottom navbar-light footer">
+      <p class="footer-text mx-auto">® 2019</p>
+    </nav>
     <!-- JAVASCRIPT -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
