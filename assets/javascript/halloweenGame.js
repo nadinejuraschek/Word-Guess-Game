@@ -76,7 +76,12 @@ var randomWord = "";
 var randomWordLetters = [];
 // Underscores Needed
 var underscores = 0;
+// Player's Guessed Letters
+var rightLetters = [];
+// Player's Wrong Guesses
+var wrongLetters = [];
 
+// Word Randomly Chosen by Computer
 function chooseWord() {
     // Let Computer Randomly Select a Word
     randomWord = wordContainer[Math.floor(Math.random() * wordContainer.length)];
@@ -84,6 +89,13 @@ function chooseWord() {
     randomWordLetters = randomWord.split("");
     // How Many Underscores to Display
     underscores = randomWord.length;
+}
+
+// Display Underscores With .push()
+function showUnderscores() {
+    for (var i = 0; i < underscores; i++) {
+        rightLetters.push("_");
+    }
 }
 
 /****************************
@@ -96,3 +108,11 @@ document.onkeyup = function (event) {
     correctLetter(playerGuess);
     endGame();
 };
+
+// Display Code in HTML - Use document. and .innerHTML
+document.getElementById("guessWord").innerHTML = rightLetters;
+
+
+document.getElementById("guessWord").innerHTML = rightLetters.toString();
+document.getElementById("guesses").innerHTML = wrongLetters.toString();
+
