@@ -84,6 +84,10 @@ var rightLetters = [];
 var wrongLetters = [];
 // Remaining Guesses
 var remainingGuesses = 12;
+// Win Counter
+var wins = 0;
+// Losses Counter
+var losses = 0;
 
 // Word Randomly Chosen by Computer
 function chooseWord() {
@@ -122,6 +126,24 @@ function correctLetter(letterNeeded) {
     }
 }
 
+// Function to store wins, losses and end game
+function endGame() {
+    document.getElementById("guessesRemaining").innerHTML = remainingGuesses;
+    document.getElementById("guessWord").innerHTML = rightLetters.toString();
+    document.getElementById("guesses").innerHTML = wrongLetters.toString();
+    if (randomWordLetters.toString() == rightLetters.toString()) {
+        wins++;
+        alert("Winner!!!");
+        document.getElementById("wins").innerHTML = wins;
+        play();
+    } else if (remainingGuesses == 0) {
+        losses++;
+        alert("Game Over");
+        document.getElementById("losses").innerHTML = losses;
+        play();
+    };
+}
+
 /****************************
  GAME CODE
  ****************************/
@@ -130,13 +152,8 @@ function correctLetter(letterNeeded) {
 document.onkeyup = function (event) {
     playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
     correctLetter(playerGuess);
-    endGame();
 };
 
 // Display Code in HTML - Use document. and .innerHTML
 document.getElementById("guessWord").innerHTML = rightLetters;
-
-
-document.getElementById("guessWord").innerHTML = rightLetters.toString();
-document.getElementById("guesses").innerHTML = wrongLetters.toString();
 
