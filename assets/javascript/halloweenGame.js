@@ -152,8 +152,25 @@ function endGame() {
 document.onkeyup = function (event) {
     playerGuess = String.fromCharCode(event.keyCode).toLowerCase();
     correctLetter(playerGuess);
+    endGame();
 };
 
-// Display Code in HTML - Use document. and .innerHTML
-document.getElementById("guessWord").innerHTML = rightLetters;
+// What Happens When Game is Started?
+function play() {
 
+    // Restart Game After Win or Loss
+    var rightLetters = [];
+    var wrongLetters = [];
+    var remainingGuesses = 12;
+
+    //
+    showUnderscores();
+
+    // Display Code in HTML - Use document. and .innerHTML
+    document.getElementById("guessWord").innerHTML = rightLetters;
+    document.getElementById("guesses").innerHTML = guessesRemaining;
+    document.getElementById("wins").innerHTML = wins;
+    document.getElementById("losses").innerHTML = losses;
+}
+
+play();
