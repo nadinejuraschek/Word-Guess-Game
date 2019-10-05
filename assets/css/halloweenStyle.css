@@ -1,0 +1,149 @@
+body {
+  font-family: "Saira", sans-serif;
+  width: 100%;
+}
+
+.header {
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.9),
+      rgba(34, 34, 34, 0.9)
+    ),
+    url("../images/spiderweb_background-two.jpg");
+  background-size: cover;
+  border-bottom: 5px solid #f9c10e;
+}
+
+/***** NAVIGATION *****/
+a {
+  color: #bf200e;
+  margin-right: 5rem;
+}
+
+a:hover {
+  color: #f9c10e;
+  margin-right: 5rem;
+}
+
+.halloween {
+  font-family: "Lacquer", sans-serif;
+  font-size: 1.8rem;
+}
+
+.christmas {
+  font-family: "Mountains of Christmas", sans-serif;
+  font-size: 1.8rem;
+}
+
+/***** GAME *****/
+.jumbotron-fluid {
+  color: #fff;
+  height: 25vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.heading-primary {
+  color: #ffffff;
+  font-family: "Frijole", sans-serif;
+  font-size: 4rem;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+}
+
+.heading-tertiary {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.card-title {
+  margin-bottom: 0.25rem;
+}
+
+.card-guess-word {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(245, 50, 28, 0.8),
+    rgba(191, 32, 14, 1)
+  );
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  height: 150px;
+  margin-top: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.card-guesses {
+  border: 3px solid rgba(191, 32, 14, 0.8);
+  border-radius: 20px;
+  height: 120px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.card-remaining {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(245, 50, 28, 0.8),
+    rgba(191, 32, 14, 1)
+  );
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  height: 120px;
+  margin: 15px auto 65px auto;
+  padding-top: 10%;
+  text-align: center;
+  width: 120px;
+}
+
+.card-wins {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(245, 50, 28, 0.8),
+    rgba(191, 32, 14, 1)
+  );
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  height: 120px;
+  margin: 15px auto 65px auto;
+  padding-top: 10%;
+  text-align: center;
+  width: 120px;
+}
+
+.card-losses {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(245, 50, 28, 0.8),
+    rgba(191, 32, 14, 1)
+  );
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  height: 120px;
+  margin: 15px auto 65px auto;
+  padding-top: 10%;
+  text-align: center;
+  width: 120px;
+}
+
+p {
+  text-align: center;
+}
+/***** FOOTER *****/
+.footer {
+  background-color: #282421;
+  color: #fff;
+  height: 3rem;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+}
