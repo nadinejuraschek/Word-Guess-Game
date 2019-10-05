@@ -86,7 +86,6 @@ Remember: global variables, then objects, then calls.
 ### display underscores of randomWord for player
 
 - HTML: add #guessWord to <p>
-- document.getElementById("guessWord").innerHTML = guessedLetters
 
 ### check if playerGuess is one of the rightLetters
 

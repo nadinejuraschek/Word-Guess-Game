@@ -76,10 +76,14 @@ var randomWord = "";
 var randomWordLetters = [];
 // Underscores Needed
 var underscores = 0;
+// Player Guess
+var playerGuess = "";
 // Player's Guessed Letters
 var rightLetters = [];
 // Player's Wrong Guesses
 var wrongLetters = [];
+// Remaining Guesses
+var remainingGuesses = 12;
 
 // Word Randomly Chosen by Computer
 function chooseWord() {
@@ -95,6 +99,26 @@ function chooseWord() {
 function showUnderscores() {
     for (var i = 0; i < underscores; i++) {
         rightLetters.push("_");
+    }
+}
+
+// Compare Entered Letter With Letters in Word - Is It a Correct Letter?
+function correctLetter(letterNeeded) {
+    var letterCorrect = false;
+    for (var i = 0; i < underscores; i++) {
+        if (randomWord[i] == letterNeeded) {
+            letterCorrect = true;
+        }
+    }
+    if (letterCorrect) {
+        for (var i = 0; i < underscores; i++) {
+            if (randomWord[i] == letterNeeded) {
+                rightLetters[i] = letterNeeded;
+            }
+        }
+    } else {
+        wrongLetters.push(playerGuess);
+        remainingGuesses--;
     }
 }
 
