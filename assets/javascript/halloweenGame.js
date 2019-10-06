@@ -62,7 +62,7 @@ var wordContainer = [
     "vampire",
     "voodoo",
     "weird",
-    "whipser",
+    "whisper",
     "wicked",
     "witch",
     "witchcraft",
