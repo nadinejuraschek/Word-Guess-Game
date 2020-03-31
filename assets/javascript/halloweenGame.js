@@ -179,3 +179,9 @@ function play() {
     document.getElementById("wins").innerHTML = wins;
     document.getElementById("losses").innerHTML = losses;
 }
+
+/****************************
+ FOOTER: CURRENT YEAR
+ ****************************/
+var currentYear = new Date().getFullYear();
+document.getElementById('year').innerHTML = currentYear;
